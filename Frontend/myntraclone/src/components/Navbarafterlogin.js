@@ -8,13 +8,13 @@ export default function Navbarafterlogin() {
   const navigate = useNavigate();
 
   const logouthandler = () => {
-    console.log(Boolean(localStorage.getItem("token")));
+    //console.log(Boolean(localStorage.getItem("token")));
     //alert("you want to logout");
     localStorage.clear();
     if (!localStorage.getItem("token")) {
       navigate("/");
     }
-    console.log(Boolean(localStorage.getItem("token")));
+    //console.log(Boolean(localStorage.getItem("token")));
   };
   const nologouthandler = () => {
     navigate("/products");

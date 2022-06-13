@@ -8,6 +8,7 @@ import one from "../components/Assets/images/footermen1.jpg";
 import two from "../components/Assets/images/footermen2.jpg";
 import three from "../components/Assets/images/footerwomen3.jpg";
 import four from "../components/Assets/images/footerjewellery4.jpg";
+import electronics from "../components/Assets/images/harddisk.jpg";
 
 export default function Homefullpage() {
   return (
@@ -26,10 +27,7 @@ export default function Homefullpage() {
             <img src={one} style={{ width: "250px", height: "250px" }}></img>
             <h3>MENS FORMAL WEAR</h3>
           </div>
-          <div className="col-sm p-3 m-1" style={{ border: "3px gray solid" }}>
-            <img src={two} style={{ width: "250px", height: "250px" }}></img>
-            <h3>MENS WEAR</h3>
-          </div>
+
           <div className="col-sm p-3 m-1" style={{ border: "3px gray solid" }}>
             <img src={three} style={{ width: "250px", height: "250px" }}></img>
             <h3>WOMENS WEAR</h3>
@@ -37,6 +35,13 @@ export default function Homefullpage() {
           <div className="col-sm p-3 m-1" style={{ border: "3px gray solid" }}>
             <img src={four} style={{ width: "250px", height: "250px" }}></img>
             <h3>JEWELLERY ITEMS</h3>
+          </div>
+          <div className="col-sm p-3 m-1" style={{ border: "3px gray solid" }}>
+            <img
+              src={electronics}
+              style={{ width: "250px", height: "250px" }}
+            ></img>
+            <h3>ELECTRONICS</h3>
           </div>
         </div>
         <hr></hr>

@@ -14,6 +14,7 @@ export default function () {
       "Flat 30% off on Mens wear",
       "Flat 20% off on Womens wear",
       "Flat 20% off on All Jewellery Items",
+      "Flat 50% off on All Electronics Purchase",
     ],
     cursor: true,
     cursorStyle: "!",

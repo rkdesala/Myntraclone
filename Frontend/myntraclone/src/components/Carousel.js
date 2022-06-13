@@ -3,6 +3,7 @@ import myntra from "../components/Assets/images/Myntra_logo.png";
 import mens from "../components/Assets/images/MEN.jpg";
 import women from "../components/Assets/images/women.jpg";
 import jewelary from "../components/Assets/images/jewelery.jpg";
+import electronics from "../components/Assets/images/electronics.jpg";
 import { Link } from "react-router-dom";
 export default function () {
   const clickhandler = () => {
@@ -28,6 +29,11 @@ export default function () {
             type="button"
             data-bs-target="#demo"
             data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="3"
           ></button>
         </div>
 
@@ -75,6 +81,12 @@ export default function () {
                 style={{ height: "500px" }}
               />
             </Link>
+            <div class="carousel-caption">
+              <div className="col" style={{}}>
+                <h1>Womens Wear</h1>
+                <h2>Flat 20% off on All Womens wear</h2>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
             <Link
@@ -92,6 +104,26 @@ export default function () {
             <div class="carousel-caption">
               <h2>Jewellery</h2>
               <h4>Flat 20% off on All Jewellery items</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <Link
+              to="/products"
+              state={{ catageory: "ele" }}
+              style={{ textDecoration: "none" }}
+            >
+              <img
+                src={electronics}
+                alt="New York"
+                class="d-block w-100"
+                style={{ height: "500px" }}
+              />
+            </Link>
+            <div class="carousel-caption">
+              <div className="col" style={{}}>
+                <h1>Electronics</h1>
+                <h2>Flat 50% off on Electronics Purchase</h2>
+              </div>
             </div>
           </div>
         </div>
