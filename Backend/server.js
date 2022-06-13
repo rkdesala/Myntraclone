@@ -139,6 +139,11 @@ app.get("/products/:category", async (req, res) => {
     console.log(data);
     res.status(200).send(data);
   }
+  if (req.params.category == "ele") {
+    let data = await allproducts_database.find({ category: "electronics" });
+    console.log(data);
+    res.status(200).send(data);
+  }
   res.end();
 });
 ///////////////////////////////////////////////////////////////////

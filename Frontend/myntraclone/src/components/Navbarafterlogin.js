@@ -102,6 +102,25 @@ export default function Navbarafterlogin() {
                   </a>
                 </li>
               </Link>
+              <Link
+                to="/products"
+                state={{ catageory: "ele" }}
+                style={{ textDecoration: "none" }}
+              >
+                <li class="nav-item" id="hoveffect">
+                  <a
+                    class="nav-link"
+                    href="javascript"
+                    style={{
+                      color: "black",
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ELECTRONICS
+                  </a>
+                </li>
+              </Link>
             </ul>
             <form class="d-flex">
               {/* <button

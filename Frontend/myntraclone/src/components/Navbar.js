@@ -113,6 +113,25 @@ export default function Navbar() {
                   </a>
                 </li>
               </Link>
+              <Link
+                to="/products"
+                state={{ catageory: "ele" }}
+                style={{ textDecoration: "none" }}
+              >
+                <li class="nav-item" id="hoveffect">
+                  <a
+                    class="nav-link"
+                    href="javascript"
+                    style={{
+                      color: "black",
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ELECTRONICS
+                  </a>
+                </li>
+              </Link>
             </ul>
             {/* <ul class="navbar-nav me-2 ">
               <li class="nav-item" id="hoveffect">
