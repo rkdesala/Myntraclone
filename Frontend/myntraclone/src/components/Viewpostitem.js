@@ -125,6 +125,7 @@ export default function Viewpostitem() {
               </div>
               <div class="modal-body">
                 <form onSubmit={ordersubmithandler}>
+                  <h5 style={{ float: "left" }}>Please select Quantity</h5>
                   <select
                     class="form-select"
                     aria-label="Default select example"
@@ -139,11 +140,11 @@ export default function Viewpostitem() {
                     <option value="3">3</option>
                   </select>
                   <div className="col-sm">
-                    <p>
-                      Order value:{"  "}
-                      {postdata.price * Totalitems}
+                    <p>Order value:{"  "}</p>
+                    <h4>
+                      {parseFloat(postdata.price * Totalitems).toFixed(2)}
                       {"  "}$ only
-                    </p>
+                    </h4>
                   </div>
                   <div className="col-sm mt-3">
                     <button
@@ -182,7 +183,7 @@ export default function Viewpostitem() {
               <div className="col-sm">
                 <h5 style={{ float: "left" }}>{postdata.title}</h5>
               </div>
-              <div className="col-sm">
+              <div className="col-sm mt-2">
                 <p style={{ fontWeight: "bold", float: "left" }}>
                   <span>⭐{rate}</span>
                   <span style={{ marginLeft: "12px" }}>Items Left:{count}</span>

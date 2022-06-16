@@ -71,7 +71,7 @@ app.post("/login", async (req, res) => {
   console.log("req maken");
   console.log(req.body);
   try {
-    console.log("this is try block");
+    // console.log("this is try block");
     let userExist = await userinfo_db.findOne({ Email: req.body.Email });
     console.log(userExist.id);
     if (!userExist) {
@@ -110,8 +110,8 @@ app.post("/login", async (req, res) => {
       }
     );
   } catch (e) {
-    //console.log(e);
-    res.status(200 || 500).send(e || " some Internal Server error");
+    console.log(e);
+    res.status(e.status || 500).send(e || " some Internal Server error");
     res.end();
   }
   //res.end();

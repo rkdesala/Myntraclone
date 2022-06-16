@@ -14,19 +14,25 @@ export default function Navbar() {
   };
   const submithandler = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/login", logindetails)
-      .then((res) => {
-        alert(res.data.status);
-        localStorage.setItem("token", res.data.token);
-        localStorage.setItem("username", res.data.username);
-        localStorage.setItem("wishlistlength", res.data.Wishlistlength);
-        console.log(res.data);
-        navigate("/postlogin");
-      })
-      .catch((e) => {
-        alert("Login failed");
-      });
+
+    if (Email === "" || Password === "") {
+      Window.alert("input fields are empty");
+    } else {
+      axios
+        .post("http://localhost:5000/login", logindetails)
+        .then((res) => {
+          alert(res.data.status);
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("username", res.data.username);
+          localStorage.setItem("wishlistlength", res.data.Wishlistlength);
+          //console.log(res.data);
+          navigate("/postlogin");
+        })
+        .catch((e) => {
+          console.log();
+          alert(e.response.data);
+        });
+    }
 
     //console.log(logindetails);
   };

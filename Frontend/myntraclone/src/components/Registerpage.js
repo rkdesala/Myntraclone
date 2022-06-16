@@ -20,16 +20,17 @@ export default function Registerpage() {
     var userdata = data;
     if (userdata.Password != userdata.Confirmpassword) {
       alert("Passwords are not matching");
+    } else {
+      axios
+        .post("http://localhost:5000/register", userdata)
+        .then((res) => {
+          alert(res.data);
+          navigate("/");
+        })
+        .catch((e) => {
+          alert("registration Failed");
+        });
     }
-    axios
-      .post("http://localhost:5000/register", userdata)
-      .then((res) => {
-        alert(res.data);
-        navigate("/");
-      })
-      .catch((e) => {
-        alert("registration Failed");
-      });
   };
 
   return (
